@@ -1,0 +1,111 @@
+.content-wrapper {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  color: #555555;
+  justify-content: center;
+
+  .add-person {
+    display: flex;
+    height: 256px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding: 15px 30px;
+    width: 400px;
+    -webkit-box-pack: justify;
+    justify-content: center;
+    @media(max-width: 768px) {
+      margin-right: 0;
+    }
+
+    button {
+      height: 82px;
+      width: 85px;
+      border-radius: 50%;
+      background-size: 1114px;
+      background-position: -942px -205px;
+      background-repeat: no-repeat;
+      border: 0;
+      background-image: url('../../assets/sprite-icone.png');
+      cursor: pointer;
+      align-self: center;
+    }
+  }
+
+  .person-details {
+    display: flex;
+    background: white;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding: 15px 30px;
+    width: 400px;
+    justify-content: space-between;
+
+    @media(max-width: 768px) {
+      margin-right: 0;
+    }
+
+    .photo-wrap {
+      text-align: center;
+      align-self: center;
+
+      img {
+        border-radius: 50%;
+      }
+
+      p {}
+    }
+
+    .details-section {
+      padding: 0 15px;
+
+      .top {
+        span {
+          font-size: 15px;
+          span{
+            display: inline-block;
+            background-image: url('../../assets/sprite-icone.png');
+            background-repeat: no-repeat;
+            background-position: -20px -57px;
+            height: 15px;
+            width: 15px;
+            background-size: 400px;
+          }
+        }
+      }
+
+      .bottom {
+        p {
+          max-width: 160px;
+        }
+      }
+    }
+
+    .buttons {
+      align-self: flex-end;
+
+      button {
+        height: 15px;
+        width: 15px;
+        background-size: 400px;
+        background-repeat: no-repeat;
+        border: 0;
+
+        &:first-child {
+          background-image: url('../../assets/sprite-icone.png');
+          background-position: 0px -59px;
+          margin-right: 5px;
+        }
+
+        &:last-child {
+          background-image: url('../../assets/sprite-icone.png');
+          background-position: -388px 2px;
+        }
+      }
+    }
+  }
+
+
+}

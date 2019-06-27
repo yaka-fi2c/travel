@@ -1,0 +1,29 @@
+<div class="content-wrapper">
+  <div *ngFor="let person of personsData; let i = index" class="person-details">
+    <div class="photo-wrap">
+      <img src="../assets/{{ person.profilePicSrc }}" alt="profile-picture">
+      <p>{{ person.role }}</p>
+    </div>
+    <div class="details-section">
+      <div class="top">
+        <h3>{{ person.name }}</h3>
+        <span><span></span>{{ person.location }}</span>
+      </div>
+      <div class="bottom">
+        <h4>{{ person.company }}</h4>
+        <p>795 Folsom Ave, sulte 600 San Fransisco, CA 94107</p>
+        <span>P: {{ person.phone }}</span>
+      </div>
+    </div>
+    <div class="buttons">
+      <button (click)="onOpenEdit(i)"></button>
+      <button (click)="onDeleteItem(i)"></button>
+    </div>
+  </div>
+  <div class="add-person">
+    <button (click)="onOpenAdd()"></button>
+  </div>
+</div>
+
+<app-edit (modalValues)="onEdit($event)" (closeModal)="modalOpen = false" [modalOpen]="modalOpen"></app-edit>
+<app-add (close)="addModalOpen = false" (passNewPerson)="onAddPerson($event)" [addModalOpen]="addModalOpen"></app-add>

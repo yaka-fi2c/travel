@@ -1,0 +1,58 @@
+.wrapper {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    width: 500px;
+    justify-content: space-around;
+    margin: auto;
+    background: white;
+    align-items: center;
+    color: #555555;
+    position: relative;
+
+    label {
+      display: block;
+    }
+
+    input {
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+
+    .validation {
+      color: rgb(206, 66, 66);
+    }
+
+    button {
+      &:first-child {
+        border: 0;
+    font-size: 32px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #555555;
+    cursor: pointer;
+      }
+
+      &:last-child {
+      color: white;
+      width: 100%;
+      padding: 10px;
+      background: #555555;
+      width: 150px;
+      }
+
+    }
+  }
+}

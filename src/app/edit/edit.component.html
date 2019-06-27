@@ -1,0 +1,24 @@
+<div *ngIf="modalOpen" class="wrapper">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <button type="button" (click)="closePopup()">x</button>
+    <h1>Edit Person Details</h1>
+    <div class="input-wrapper">
+      <label>Phone</label>
+      <input minlength=10 maxlength=10 required name="phone" formControlName="phone" type="number">
+      <p class="validation" *ngIf="form.get('phone').invalid && form.get('phone').touched">Phone Is Invalid!</p>
+    </div>
+    <div class="input-wrapper">
+      <label>Name</label>
+      <input name="name" formControlName="name" type="text">
+    </div>
+    <div class="input-wrapper">
+      <label>Company</label>
+      <input name="company" formControlName="company" type="text">
+    </div>
+    <div class="input-wrapper">
+      <label>Role</label>
+      <input name="role" formControlName="role" type="text">
+    </div>
+    <button [disabled]="form.get('phone').invalid">Save Edit</button>
+  </form>
+</div>

@@ -1,0 +1,28 @@
+<div *ngIf="addModalOpen" class="wrapper">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <button type="button" (click)="closePopup()">x</button>
+    <h1>Add New Person</h1>
+    <div class="input-wrapper">
+      <label>Phone</label>
+      <input name="phone" formControlName="phone" type="number">
+      <p class="validation" *ngIf="form.get('phone').invalid && form.get('phone').touched">Phone Is Invalid!</p>
+    </div>
+    <div class="input-wrapper">
+      <label>Street</label>
+      <input name="street" formControlName="street" type="text">
+    </div>
+    <div class="input-wrapper">
+      <label>Name</label>
+      <input name="name" formControlName="name" type="text">
+    </div>
+    <div class="input-wrapper">
+      <label>Company</label>
+      <input name="company" formControlName="company" type="text">
+    </div>
+    <div class="input-wrapper">
+      <label>Role</label>
+      <input name="role" formControlName="role" type="text">
+    </div>
+    <button [disabled]="form.get('phone').invalid">Add</button>
+  </form>
+</div>
